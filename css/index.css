@@ -1,0 +1,188 @@
+/* Format rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .3s ease;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Navbar styles starts */
+  
+  .navbar {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .navbar-brand {
+    font-family: inherit;
+    font-weight: 600;
+    padding-top: 9px;
+    letter-spacing: 1.2px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .navbar-brand::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 10px;
+    background: linear-gradient(96.34deg, #E537B9 0%, #C040DF 100%);
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  
+  /* Navbar styles ends */
+  
+  ion-icon {
+    font-size: 2.5rem;
+    color: #444;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .card {
+    border: 0;
+    color: #444;
+  }
+  
+  .card:hover img {
+    filter: brightness(50%);
+  }
+  
+  .card:hover .card-body .card-title {
+    text-decoration: underline;
+  }
+  
+  .card-title {
+    margin-bottom: 0.2rem;
+  }
+  
+  .card span {
+    font-size: .8rem;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: #555;
+    margin-top: .4rem;
+  }
+  
+  .card-img-top{
+    max-height: 25rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+  }
+  
+  .accordion-button {
+    color: #444;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  .accordion-button::after {
+    width: 0;
+  }
+  
+  .accordion-button-icon {
+    background-color: transparent;
+    font-size: 1.5rem;
+    margin-right: .5rem;
+  }
+  
+  .accordion-button:not(.collapsed) .accordion-button-icon {
+    transition: transform .4s;
+    transform: rotate(180deg);
+    color: var(--bs-accordion-active-color);
+  }
+  
+  .accordion-button.collapsed .accordion-button-icon {
+    transition: transform .4s;
+    transform: rotate(0);
+  }
+  
+  /* Loader CSS */
+  .loader  {
+    animation: rotate 1s infinite;  
+    height: 50px;
+    width: 50px;
+  }
+  
+  .loader:before,
+  .loader:after {   
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 20px;  
+    width: 20px;
+  }
+  .loader:before {
+    animation: ball1 1s infinite;  
+    background-color: #cb2025;
+    box-shadow: 30px 0 0 #f8b334;
+    margin-bottom: 10px;
+  }
+  .loader:after {
+    animation: ball2 1s infinite; 
+    background-color: #00a096;
+    box-shadow: 30px 0 0 #97bf0d;
+  }
+  
+  @keyframes rotate {
+    0% { 
+      -webkit-transform: rotate(0deg) scale(0.8); 
+      -moz-transform: rotate(0deg) scale(0.8);
+    }
+    50% { 
+      -webkit-transform: rotate(360deg) scale(1.2); 
+      -moz-transform: rotate(360deg) scale(1.2);
+    }
+    100% { 
+      -webkit-transform: rotate(720deg) scale(0.8); 
+      -moz-transform: rotate(720deg) scale(0.8);
+    }
+  }
+  
+  @keyframes ball1 {
+    0% {
+      box-shadow: 30px 0 0 #f8b334;
+    }
+    50% {
+      box-shadow: 0 0 0 #f8b334;
+      margin-bottom: 0;
+      -webkit-transform: translate(15px,15px);
+      -moz-transform: translate(15px, 15px);
+    }
+    100% {
+      box-shadow: 30px 0 0 #f8b334;
+      margin-bottom: 10px;
+    }
+  }
+  
+  @keyframes ball2 {
+    0% {
+      box-shadow: 30px 0 0 #97bf0d;
+    }
+    50% {
+      box-shadow: 0 0 0 #97bf0d;
+      margin-top: -20px;
+      -webkit-transform: translate(15px,15px);
+      -moz-transform: translate(15px, 15px);
+    }
+    100% {
+      box-shadow: 30px 0 0 #97bf0d;
+      margin-top: 0;
+    }
+  }
+  
+  
